@@ -26,7 +26,7 @@ class CrouselAdapter(private val context: Context) :
 
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        (holder as CrouselHolder).bind(getItem(position), context)
+        (holder as CrouselHolder).bind(getItem(position+3), context)
     }
 
     class CrouselHolder(view: View) : RecyclerView.ViewHolder(view) {

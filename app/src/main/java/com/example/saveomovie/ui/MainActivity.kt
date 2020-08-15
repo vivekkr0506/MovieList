@@ -1,9 +1,11 @@
 package com.example.saveomovie.ui
 
 import android.content.Context
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.NestedScrollView
 import androidx.fragment.app.FragmentActivity
@@ -32,6 +34,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var movieRepository: MoviePagedListRepository
 
 
+    @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -99,17 +102,25 @@ class MainActivity : AppCompatActivity() {
        /*
        OnScrollChangeListener for Title
         */
-        scrollView.setOnScrollChangeListener(NestedScrollView.OnScrollChangeListener { v, scrollX, scrollY, oldScrollX, oldScrollY ->
-            Log.d(
-                " FragmentActivity.TAG",
-                "onScrollChangeForY - scrollY: $scrollY oldScrollY: $oldScrollY"
-            )
+//        scrollView.setOnScrollChangeListener(NestedScrollView.OnScrollChangeListener { v, scrollX, scrollY, oldScrollX, oldScrollY ->
+//            Log.d(
+//                " FragmentActivity.TAG",
+//                "onScrollChangeForY - scrollY: $scrollY oldScrollY: $oldScrollY"
+//            )
+//            if (scrollY > 700) {
+//                tvToolbarTitle.text = "Now Showing"
+//            } else {
+//                tvToolbarTitle.text = "Movies"
+//            }
+//        })
+
+        scrollView.setOnScrollChangeListener { v, scrollX, scrollY, oldScrollX, oldScrollY ->
             if (scrollY > 700) {
                 tvToolbarTitle.text = "Now Showing"
             } else {
                 tvToolbarTitle.text = "Movies"
             }
-        })
+        }
     }
 
 
