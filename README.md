@@ -42,3 +42,9 @@ I used the TMDB for the API's,and Used Retrofit for Network call along with MVVM
 
 ### Build
     ./gradlew assembleDebug
+    password - 123456
+    key - saveo
+    keystore Path - /saveoMovieKey
+    
+### Find APK 
+    Users/vivek/Desktop/SaveoMovie/app/release

@@ -206,6 +206,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
+                    android:background="@color/colorWhite"
                     android:layout_below="@+id/rlImage">
                     <TextView
                         android:id="@+id/SY"
@@ -226,6 +227,7 @@
                         android:textFontWeight="500"
                         android:fontFamily="sans-serif-condensed-light"
                         android:padding="6dp"
+                        android:textColor="@color/colorWhite"
                         >
 
                     </TextView>
